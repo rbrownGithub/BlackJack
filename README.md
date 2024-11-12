@@ -1,44 +1,116 @@
-#GameRunner
+# BlackJack
 
-##Description
+A text-based BlackJack card game implemented in Java that simulates the classic casino experience. Players can enter their name, manage their betting balance, and play multiple rounds against the dealer.
 
-GameRunner is a Java console-based game that prompts the user to enter their name and an initial balance to begin the game. The game is designed to simulate some aspects of casino-like gameplay.
+## Features
 
-##Features
+- Classic BlackJack gameplay
+- Player name customization
+- Balance and betting system
+- Multiple round gameplay
+- Optional background music support (currently commented out)
+- Interactive command-line interface
 
-Accepts user input for player name and initial balance.
+## Game Rules
 
-##Prerequisites
+- The goal is to beat the dealer by getting a hand value as close to 21 as possible without going over
+- Card values:
+  - Number cards (2-10): Face value
+  - Face cards (Jack, Queen, King): 10
+  - Ace: 1 or 11 (whichever benefits the player)
+- Player options:
+  - Hit: Take another card
+  - Stand: Keep current hand
+  - Double Down: Double the bet after receiving initial cards
+- Dealer must hit on 16 and below, stand on 17 and above
+- BlackJack (an Ace with a 10 or face card) pays 3:2
 
-To run this program, you need:
+## Prerequisites
 
-Java Development Kit (JDK) installed (version 8 or higher).
+To run this game, you need:
 
-A terminal or IDE capable of running Java programs.
+- Java Development Kit (JDK) 8 or higher
+- A terminal or command prompt
+- Basic understanding of command-line operations
 
-##How to Run
+## Installation
 
-Compile the Java file using the command:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/BlackJack.git
+```
 
-javac GameRunner.java
+2. Navigate to the project directory:
+```bash
+cd BlackJack
+```
 
-Run the compiled class using:
+3. Compile the Java files:
+```bash
+javac GameRunner.java Game.java
+```
 
+## How to Play
+
+1. Run the game:
+```bash
 java GameRunner
+```
 
-Follow the prompts to enter your name and initial balance.
+2. Game Flow:
+   - Enter your name when prompted
+   - Input your initial balance
+   - Place your bet for each round
+   - Make decisions during gameplay (hit/stand)
+   - Choose whether to play another round
+   - Cash out when you're done
 
-##Future Improvements
+## Project Structure
 
-Implement background music functionality by fixing the PlayMusic class.
+- `GameRunner.java` - Main class containing the game loop and player setup
+- `Game.java` - Contains BlackJack game logic and round management
+- `PlayMusic.java` - (Optional) Handles background music functionality
+- Audio files (optional):
+  - `CasinoJazz.wav` - Background music file (currently disabled)
 
-Add game logic for a complete casino-like game experience.
+## Future Enhancements
 
-##Dependencies
+- Implement split pairs functionality
+- Add insurance betting option
+- Enable multiplayer support
+- Include background music
+- Add graphical user interface
+- Implement statistical tracking of wins/losses
+- Save player progress and high scores
 
-Currently, there are no external dependencies, but a future implementation may require an audio library to play music.
+## Contributing
 
-##Author
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
 
-This project was created as part of a learning exercise. Contributions and suggestions for improvement are welcome.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Troubleshooting
+
+If you encounter any issues:
+
+1. Ensure Java is properly installed and added to your system PATH
+2. Verify all source files are in the same directory
+3. Check that you have proper read/write permissions in the game directory
+4. Make sure your terminal/command prompt supports text input
+
+## Authors
+
+- Rodale Brown
+
+## Acknowledgments
+
+- Java Documentation
+- Standard BlackJack casino rules
+- [Any other resources or inspirations]
 
